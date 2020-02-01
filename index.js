@@ -11,7 +11,7 @@ bot.registry.registerGroup('initiative', 'initiative');
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands");
 
-
+//hola francis
 
 /* Function to reply user with something predetermined.
 bot.on('message', (message) => {
