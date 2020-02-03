@@ -27,4 +27,4 @@ console.log(message.content);
 
 });*/
 
-bot.login('NjcyMjA5NDEwMTM4ODMyOTE5.XjIJ_g.UaMkLC-PqStkBD1YD-qydblE1Xg');
+bot.login('NjcyMjA5NDEwMTM4ODMyOTE5.Xjd-aA.jr3mjVD_LSbqlpmNnwKlWNzn4EE');
