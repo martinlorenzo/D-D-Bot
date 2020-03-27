@@ -15,19 +15,20 @@ class RollInitiativeCommand extends comando.Command {
         var temp;
         var a=1;
         var playerArray= [];
-        for (var i = 0; i <= message.argString.length; i++){
-            if (message.argString.charAt(i) == ","){
-               // message.channel.sendMessage(message.argString.charAt(i));
-                temp = message.argString.slice(a,i);
-                a=i;
-                playerArray.push(temp); 
-            }
+        var lmao = [];
+        message.argString.trimStart();
+        playerArray.push(message.argString.split(","));
+        var newPos, temp;
+        for (var i = playerArray[0].length - 1; i > 0; i--){
+            newPos = Math.floor(Math.random()* (i + 1));
+            temp = playerArray[0][i];
+            playerArray[0][i] = playerArray[0][newPos];
+            playerArray[0][newPos] = temp;
         }
-        
-        message.channel.sendMessage(playerArray);
+              
+        message.channel.sendMessage(playerArray[0]);
     }
-//   martin,rod  r  i  g  o  ,  l  o  r  e  n  z  o
-//  012345678910 11 12 13 14 15 16 17 18 19 20 21 22 
+
 
 }
 module.exports = RollInitiativeCommand;
